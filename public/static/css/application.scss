@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Ubuntu:400,700&display=swap');
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+@import 'colors';
+@import 'header';
+@import 'headerCard';
+@import 'gradient_square';
+@import 'navbar';
+@import 'cards';
+@import 'scrollbar';
+
+body {
+  margin:0;
+  padding:0;
+  background-color: $backgroundwhite;
+  width: 100%;
+  color: $textgrey;
+  font-family: 'Lato', sans-serif;
+}
+
+p{
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+h1 h2 h3 {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.normalizedBackground{
+  width: 100%;
+  background-color: $backgroundwhite;
+}
+
+.makeItFlex{
+  display: flex;
+  display: -webkit-flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.displayNone{
+  display: none;
+}

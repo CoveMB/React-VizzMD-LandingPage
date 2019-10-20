@@ -1,0 +1,19 @@
+.gradient-square {
+  width: 50%;
+  height: 18%;
+  margin: -50px auto 20px auto;
+  padding: 20px 30px 20px 30px;
+  background: linear-gradient(90deg, #054086 0%, #1454a3 100%);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12), 0px 5px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 20;
+}
+
+.brandHeaderCard{
+  padding: 10%;
+  width:95% ;
+}

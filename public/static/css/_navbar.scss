@@ -1,0 +1,41 @@
+.navbarHidden {
+  top: -8vh;
+  opacity: 0;
+  transition: top 0.6s;
+  transition: opacity 0.6s;
+}
+
+.navbar {
+  width: 100vw;
+  height: 10vh;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  opacity: 1;
+  background-color: #F3F3F3;
+  z-index: 999;
+  transition: opacity 0.6s;
+  transition: top 0.6s;
+}
+
+.normalizeBtn{
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navBtn:hover{
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.navBtn:focus{
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}

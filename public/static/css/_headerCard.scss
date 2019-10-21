@@ -55,7 +55,7 @@
   color: $darkblue;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1024px) {
   .grabEmailPart{
     margin-bottom: 20px;
   }
@@ -68,6 +68,9 @@
     font-size: 0.9em;
   }
 
+}
+
+@media only screen and (max-width: 800px) {
   .header-card {
     // min-height: 90vh;
     padding-top: 80px;

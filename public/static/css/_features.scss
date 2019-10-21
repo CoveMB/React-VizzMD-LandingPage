@@ -1,6 +1,21 @@
-.numerisation{
+.numerisationImg{
   width: 70%;
-  margin: 0 15% 30px 15%;
+  margin: 90px 15% 90px 15%;
   text-align: center;
+  overflow-x: scroll;
   overflow-y: scroll;
+}
+
+.numerisationText{
+  width: 70%;
+  margin: 0 15% 0 15%;
+  text-align: center;
+}
+
+.numerisationTitle{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+  color: #003C89;
 }

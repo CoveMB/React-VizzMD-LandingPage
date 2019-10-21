@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 const Features = () => {
   return (
-    <div className="numerisation">
-      <img src="/static/images/numerisation.png" alt="VizzMD Allow to go from paper to digital" />
-    </div>
+    <Fragment>
+      <h2 className="numerisationTitle">Passez du papier au numérique</h2>
+      <div className="numerisationImg">
+        <img src="/static/images/numerisation.png" alt="VizzMD Allow to go from paper to digital" />
+      </div>
+      <h3 className="numerisationText">La numérisation permet de conserver l’intégrité des données confrontée à l’usure du temps, à rendre l’accès des dossiers plus facile et rapide.</h3>
+    </Fragment>
   );
 };
 export default Features;

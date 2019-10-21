@@ -8,8 +8,8 @@ const parallaxData = [
     easing: "easeIn",
     properties: [
       {
-        startValue: 0.6,
-        endValue: 1,
+        startValue: 0.4,
+        endValue: 0.8,
         property: 'scale',
       },
     ],

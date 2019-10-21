@@ -9,11 +9,12 @@ h1 h2 h3 {
 }
 
 .sectionTitle{
-  padding-top: 60px;
+  margin: 0 10%;
+  // padding-top: 60px;
   font-family: Lato;
   font-style: normal;
   font-weight: bold;
-  font-size: 3em;
+  font-size: 2em;
   text-align: center;
   color: #003C89;
 }
@@ -22,7 +23,7 @@ h1 h2 h3 {
   font-family: Lato;
   font-style: normal;
   font-weight: 800;
-  font-size: 2.2em;
+  font-size: 1.4em;
   line-height: 40px;
   text-align: center;
   margin: 0 10% 0 10%;
@@ -32,7 +33,7 @@ h1 h2 h3 {
 .cardText{
   font-style: normal;
   font-weight: 800;
-  font-size: 1.8em;
+  font-size: 1.2em;
   line-height: 40px;
   text-align: justify;
   color: $textgrey;
@@ -48,6 +49,9 @@ h1 h2 h3 {
   color: $darkblue;
   font-weight: 900;
   font-size: 1.05em;
+}
+h2{
+  font-size: 1.5em;
 }
 
 @media only screen and (max-width: 1024px) {

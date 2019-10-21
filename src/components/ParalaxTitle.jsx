@@ -5,11 +5,11 @@ import Plx from 'react-plx';
 const parallaxData = [
   {
     start: "self",
-    duration: 700,
+    duration: 600,
     properties: [
       {
-        startValue: 1,
-        endValue: 1.3,
+        startValue: 0.5,
+        endValue: 1,
         property: 'scale',
       },
     ],

@@ -11,6 +11,7 @@
 @import 'scrollbar';
 @import 'spinner';
 @import 'features';
+@import 'ongoing';
 
 body {
   margin:0;
@@ -37,7 +38,7 @@ h1 h2 h3 {
   font-family: Lato;
   font-style: normal;
   font-weight: bold;
-  font-size: 3em;
+  font-size: 3.2em;
   text-align: center;
   color: #003C89;
 }

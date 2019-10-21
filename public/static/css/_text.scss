@@ -51,6 +51,10 @@ h1 h2 h3 {
 }
 
 @media only screen and (max-width: 800px) {
+  h2{
+    font-size: 1.5em;
+  }
+
   .selectedCardTitle{
     width: 100%;
     padding: 0 15px 0 15px;

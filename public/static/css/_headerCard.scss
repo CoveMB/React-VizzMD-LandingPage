@@ -3,7 +3,6 @@
   width: 47vw;
   min-height: 90vh;
   max-height: 100vh;
-  // overflow: scroll;
   margin-left: 2vw;
   margin-top: 8vh;
   background: $backgroundwhite;
@@ -57,12 +56,23 @@
 }
 
 @media only screen and (max-width: 1000px) {
+  .grabEmailPart{
+    margin: 0;
+  }
+
+  .headerCardTitle {
+    font-size: 1.8em;
+  }
+
+  .headerCardText{
+    font-size: 0.9em;
+  }
+
   .header-card {
     min-height: 90vh;
-    max-height: 90vh;
-    overflow: scroll;
     padding-top: 80px;
     width: 100vw;
-    margin: 10vh 0 0 0;
+    padding-bottom: 300px;
+    margin: 0 0 0 0;
   }
 }

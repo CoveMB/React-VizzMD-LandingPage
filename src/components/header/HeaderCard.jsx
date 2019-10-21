@@ -3,19 +3,38 @@ import { Animated } from "react-animated-css";
 import BrandWhite from './BrandWhite';
 import HeaderCardContent from './HeaderCardContent';
 
+import Plx from 'react-plx';
+
+const parallaxData = [
+  {
+    start: "self",
+    duration: 600,
+    easing: "easeIn",
+    properties: [
+      {
+        startValue: 0,
+        endValue: 8,
+        property: 'translateX',
+      },
+    ],
+  },
+];
 
 const HeaderCard = () => {
   return (
-    <Animated animationIn="fadeInLeft" animationOut="fadeOut" isVisible>
+    <Plx
+      className="parallaxTitle"
+      parallaxData={parallaxData}
+    >
       <div
-        className="header-card"
+        className="header-card scrollbarxcustom"
       >
         <div className="gradient-square">
           <BrandWhite />
         </div>
         <HeaderCardContent />
       </div>
-    </Animated>
+    </Plx>
   );
 };
 

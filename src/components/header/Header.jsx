@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Plx from 'react-plx';
 import HeaderCard from './HeaderCard';
 import HeaderWave from './HeaderWave';
@@ -18,18 +18,40 @@ const parallaxData = [
   },
 ];
 
+const parallaxDataCard = [
+  {
+    start: 0,
+    duration: 600,
+    easing: "linear",
+    properties: [
+      {
+        startValue: 0,
+        endValue: -800,
+        property: 'translateY',
+      },
+    ],
+  },
+];
+
 const Header = () => {
   return (
-    <Plx
-      className="parallaxTitle"
-      parallaxData={parallaxData}
-    >
+    <Fragment>
+      <Plx
+        className="stickyHeader"
+        parallaxData={parallaxData}
+      >
+        <div
+          className="header-background"
+        />
+      </Plx>
+      <Plx
+        className=""
+        parallaxData={parallaxDataCard}
+      >
+        <HeaderCard />
+      </Plx>
       <HeaderWave />
-      <HeaderCard />
-      <div
-        className="header-background"
-      />
-    </Plx>
+    </Fragment>
 
   );
 };

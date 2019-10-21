@@ -24,28 +24,19 @@ body {
   overflow-x: hidden;
 }
 
-.sectionTitle{
-  padding-top: 60px;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 3.2em;
-  text-align: center;
-  color: #003C89;
-}
-
 .normalizedBackground{
   width: 100%;
   background-color: $backgroundwhite;
-  margin: 0;
-  padding-bottom: 65px;
+  margin: -16vh 0 0 0;
+  padding: 50px 0 50px 0;
+  border: 1px 1px 1px 1px solid $backgroundwhite;
 }
 
 .normalizedBackgroundWhite{
   width: 100%;
   background-color: $cardwhite;
   margin: 0;
-  padding-bottom: 65px;
+  padding: 50px 0 50px 0;
 }
 
 .normalizedBackgroundbig{

@@ -1,12 +1,14 @@
 .header-card {
-  position: absolute;
   width: 45vw;
-  min-height: 90vh;
-  max-height: 100vh;
-  margin-left: 2vw;
-  margin-top: 8vh;
+  min-height: 95vh;
+  // max-height: 95vh;
+  // overflow-x: auto;
+  // padding-bottom: 5vh;
+  margin: -92vh 0 0 5vh;
+  padding-top: 25px;
+  padding-bottom: 1px;
   background: $backgroundwhite;
-  border-radius: 4px;
+  border-radius: 4px 4px 4px 4px;
   z-index: 9999;
 }
 
@@ -75,7 +77,6 @@
     min-height: 100vh;
     padding-top: 80px;
     width: 100vw;
-    padding-bottom: 600px;
-    margin: 0 0 0 0;
+    margin: -100vh 0 0 0;
   }
 }

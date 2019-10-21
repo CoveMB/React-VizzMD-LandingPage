@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect, useRef } from 'react';
+import React, { Fragment, useState } from 'react';
 import Spinner from '../Spinner';
 
 const HeaderForm = () => {
@@ -15,14 +15,16 @@ const HeaderForm = () => {
 
     console.log(process.env.ZAPPIER_ENDPOINT);
     setSending(true);
-    fetch(process.env.ZAPPIER_ENDPOINT, {
-      method: 'POST',
-      body: JSON.stringify({ email }),
-    }).then(() => {
-      setSending(false);
-      setsucces(true);
-    })
-      .catch(() => alert("There was an error, please try again"));
+    setTimeout(() => {
+      fetch(process.env.ZAPPIER_ENDPOINT, {
+        method: 'POST',
+        body: JSON.stringify({ email }),
+      }).then(() => {
+        setSending(false);
+        setsucces(true);
+      })
+        .catch(() => alert("There was an error, please try again"));
+    }, 3000);
     setEmail("");
   };
 

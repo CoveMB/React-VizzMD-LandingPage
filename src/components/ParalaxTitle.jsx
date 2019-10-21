@@ -6,6 +6,7 @@ const parallaxData = [
   {
     start: "self",
     duration: 600,
+    easing: "easeIn",
     properties: [
       {
         startValue: 0.5,

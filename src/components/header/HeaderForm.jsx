@@ -37,7 +37,7 @@ const HeaderForm = () => {
     return (
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="emailInput">Email address</label>
+          <label htmlFor="emailInput">Email addresse</label>
           <input
             ref={emailInput => emailInput && emailInput.focus()}
             type="email"
@@ -49,14 +49,14 @@ const HeaderForm = () => {
             onChange={handleChange}
           />
         </div>
-        <button type="submit" className="btn btnVizz">Submit</button>
+        <button type="submit" className="btn btnVizz">Soumettre</button>
       </form>
     );
   };
 
   return (
     <Fragment>
-      <h2 style={{ marginBottom: "10px" }}>Participez au devellopement de VizzMD</h2>
+      <h2 style={{ marginBottom: "10px" }}>Participez au dévellopement de VizzMD</h2>
       {emailBodyContent()}
     </Fragment>
   );

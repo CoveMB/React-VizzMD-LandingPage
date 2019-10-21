@@ -9,9 +9,9 @@ const HeaderCardContent = () => {
         <h2 style={{ marginBottom: "20px" }}>
           Avec VizzMD, les données de santé sont:
         </h2>
-        <p><img style={{ marginLeft: "15px" }} className="svgDone" src="/static/images/donesvg.svg" alt="svg done" /><strong className="darkblueTitle">Numériques</strong> (standardisé et rapide d’accès)</p>
-        <p><img style={{ marginLeft: "15px" }} className="svgDone" src="/static/images/donesvg.svg" alt="svg done" /><strong className="darkblueTitle">Visuels</strong> (faciles à interpréter et comparer)</p>
-        <p><img style={{ marginLeft: "15px" }} className="svgDone" src="/static/images/donesvg.svg" alt="svg done" /><strong className="darkblueTitle">Accessibles</strong> (partagée entre thérapeutes)</p>
+        <p><img style={{ marginLeft: "15px" }} className="svgDone" src="/static/images/donesvg.svg" alt="svg done" /><strong className="darkblueTitle">Numériques</strong> (standardisée et rapide d’accès)</p>
+        <p><img style={{ marginLeft: "15px" }} className="svgDone" src="/static/images/donesvg.svg" alt="svg done" /><strong className="darkblueTitle">Visuelles</strong> (faciles à interpréter et comparer)</p>
+        <p><img style={{ marginLeft: "15px" }} className="svgDone" src="/static/images/donesvg.svg" alt="svg done" /><strong className="darkblueTitle">Accessibles</strong> (partagées entre thérapeutes)</p>
         <p><img style={{ marginLeft: "15px" }} className="svgDone" src="/static/images/donesvg.svg" alt="svg done" /><strong className="darkblueTitle">Engageante</strong> (le patient de suivre sa progression)</p>
         <div className="grabEmailPart">
           <HeaderForm />

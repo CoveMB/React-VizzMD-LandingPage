@@ -1,13 +1,3 @@
-.sectionTitle{
-  padding-top: 60px;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 3em;
-  text-align: center;
-  color: #003C89;
-}
-
 .card{
   width: 350px;
   height: 421px;
@@ -37,17 +27,6 @@
 
 .cardBox{
   margin: 100px 10% 50px 10%;
-}
-
-.cardTitle{
-  font-family: Lato;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 2.2em;
-  line-height: 40px;
-  text-align: center;
-  margin: 0 10% 0 10%;
-  color: $textgrey;
 }
 
 .closeCardBtn{
@@ -82,30 +61,11 @@
   width: 60%;
 }
 
-.cardText{
-  font-style: normal;
-  font-weight: 800;
-  font-size: 1.8em;
-  line-height: 40px;
-  text-align: justify;
-  color: $textgrey;
-}
 
-.blueTitle{
-  color: $lightBlue;
-  font-weight: 900;
-}
-
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 800px) {
   .svgSelectedCard{
     width: 30%;
     margin: 20px 35% 20px 35%;
-  }
-
-  .selectedCardTitle{
-    width: 100%;
-    padding: 0 15px 0 15px;
-    font-size: 0.8em;
   }
 
   .selectedCardText {
@@ -113,8 +73,23 @@
     margin: 20px 10% 20px 10%;
   }
 
-  .cardText{
-    font-size: 1.2em;
-    line-height: 30px;
+  .card{
+    width: 150px;
+    height: 221px;
+    margin-bottom: 30px;
+    background: $cardwhite;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+  }
+
+  .svgCard{
+    width: 40%;
+    margin: 30px 30% 30px 30%;
+  }
+
+  .svgDots{
+    display: block;
+    width: 20%;
+    margin: 25px auto 25px auto;
   }
 }

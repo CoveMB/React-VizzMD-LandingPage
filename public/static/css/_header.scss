@@ -21,3 +21,9 @@
   overflow-x: hidden;
   z-index: 9999;
 }
+
+@media only screen and (max-width: 1000px) {
+  .header-wave {
+    display: none;
+  }
+}

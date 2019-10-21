@@ -12,7 +12,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link rel="shortcut icon" type="image/x-icon" href="/public/static/images/favicon.png" />
+          <link rel="shortcut icon" type="image/x-icon" href="/static/images/favicon.png" />
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
         </Head>
         <body>

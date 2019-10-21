@@ -4,7 +4,7 @@ import SelectedCard from './SelectedCard';
 import Card from './Card';
 
 const CardsContainer = () => {
-  const [selectedCard, setSelectedCard] = useState(false);
+  const [selectedCard, setSelectedCard] = useState({ isSelected: false, selected: false });
 
   const cardTitle = (topic) => {
     switch (topic) {
@@ -20,40 +20,40 @@ const CardsContainer = () => {
   };
 
   const getClassSelected = () => {
-    if (!selectedCard) {
+    if (!selectedCard.isSelected) {
       return "displayNone";
     }
     return "cardBox makeItFlex";
   };
 
   const getClassCards = () => {
-    if (selectedCard) {
+    if (selectedCard.isSelected) {
       return "displayNone";
     }
     return "cardBox makeItFlex";
   };
 
   const selectCard = (topic) => {
-    setSelectedCard(topic);
+    setSelectedCard({ isSelected: true, selected: topic });
   };
 
   const closeSelectedCard = () => {
-    setSelectedCard(false);
+    setSelectedCard({ isSelected: false, selected: false });
   };
 
   return (
     <Fragment>
       <h1 className="cardsTitle">Les enjeux des soins de santé aujourd'hui</h1>
-      <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={selectedCard}>
+      <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={selectedCard.isSelected}>
         <div className={getClassSelected()}>
           <SelectedCard
-            topic={selectedCard}
+            topic={selectedCard.selected}
             closeSelectedCard={closeSelectedCard}
             cardTitle={cardTitle}
           />
         </div>
       </Animated>
-      <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={!selectedCard}>
+      <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={!selectedCard.isSelected}>
         <div className={getClassCards()}>
           <Card topic="personalised" selectCard={selectCard} cardTitle={cardTitle} />
           <Card topic="engagement" selectCard={selectCard} cardTitle={cardTitle} />

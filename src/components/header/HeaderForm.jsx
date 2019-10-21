@@ -12,8 +12,6 @@ const HeaderForm = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    console.log(process.env.ZAPPIER_ENDPOINT);
     setSending(true);
     setTimeout(() => {
       fetch(process.env.ZAPPIER_ENDPOINT, {
@@ -22,8 +20,7 @@ const HeaderForm = () => {
       }).then(() => {
         setSending(false);
         setsucces(true);
-      })
-        .catch(() => alert("There was an error, please try again"));
+      }).catch(() => alert("There was an error, please try again"));
     }, 3000);
     setEmail("");
   };

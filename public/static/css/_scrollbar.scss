@@ -13,7 +13,7 @@ body::-webkit-scrollbar
 
 body::-webkit-scrollbar-thumb
 {
-	border-radius: 10px;
+	border-radius: 8px;
 	background-image: -webkit-gradient(linear,
 									   left bottom,
 									   left top,
@@ -37,11 +37,35 @@ body::-webkit-scrollbar-thumb
 
 .scrollbarxcustom::-webkit-scrollbar-thumb
 {
-	border-radius: 10px;
+	border-radius: 8px;
 	background-image: -webkit-gradient(linear,
 									   left bottom,
 									   left top,
 									   color-stop(0.44, $lightBlue),
+									   color-stop(0.72, $darkblue),
+									   color-stop(0.86, $darkblue));
+}
+
+.scrollbarycustom::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: $backgroundwhite;
+	border-radius: 8px;
+}
+
+.scrollbarycustom::-webkit-scrollbar
+{
+	height: 5px;
+	background-color: $backgroundwhite;
+}
+
+.scrollbarycustom::-webkit-scrollbar-thumb
+{
+	border-radius: 8px;
+	background-image: -webkit-gradient(linear,
+									   left bottom,
+									   left top,
+									   color-stop(0.44, $darkblue),
 									   color-stop(0.72, $darkblue),
 									   color-stop(0.86, $darkblue));
 }

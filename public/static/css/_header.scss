@@ -4,7 +4,6 @@
   left: 0;
   background: url("../images/header.png");
   background-size: cover;
-  // background-position: 100% 100%;
   background-repeat: no-repeat;
   height: 98vh;
   width: 100%;
@@ -19,7 +18,7 @@
   margin: 0;
   width: 100%;
   overflow-x: hidden;
-  z-index: 9999;
+  z-index: 99;
 }
 
 @media only screen and (max-width: 1000px) {

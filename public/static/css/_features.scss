@@ -1,18 +1,20 @@
 .numerisationImg{
-  width: 70%;
-  margin: 90px 15% 90px 15%;
+  width: 80%;
+  margin: 90px auto;
   text-align: center;
   overflow-x: scroll;
-  overflow-y: scroll;
+  // overflow-y: scroll;
 }
 
 .numerisationText{
-  width: 70%;
-  margin: 0 15% 0 15%;
+  width: 60%;
+  margin: 0 auto;
   text-align: center;
 }
 
 .numerisationTitle{
+  width: 60%;
+  margin: 0 auto;
   font-style: normal;
   font-weight: bold;
   font-size: 3em;

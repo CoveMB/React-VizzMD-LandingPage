@@ -17,11 +17,11 @@ const App = () => {
         <ParalaxTitle title="Les enjeux des soins de santé aujourd'hui" />
         <CardsContainer />
       </div>
-      <div className="normalizedBackground">
+      <div className="normalizedBackgroundWhite">
         <ParalaxTitle title="Passez du papier au numérique" />
         <Features />
       </div>
-      <div className="normalizedBackground">
+      <div className="normalizedBackgroundWhite">
         <ParalaxTitle title="Origine et avancement du projet" />
         <Ongoing />
       </div>

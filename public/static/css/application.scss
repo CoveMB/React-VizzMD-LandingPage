@@ -50,6 +50,13 @@ h1 h2 h3 {
   padding-bottom: 65px;
 }
 
+.normalizedBackgroundWhite{
+  width: 100%;
+  background-color: $cardwhite;
+  margin: 0;
+  padding-bottom: 65px;
+}
+
 .normalizedBackgroundbig{
   width: 100%;
   height: 200vh;

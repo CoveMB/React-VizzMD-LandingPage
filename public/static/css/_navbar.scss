@@ -1,8 +1,7 @@
 .navbarHidden {
   top: -8vh;
-  opacity: 0;
   transition: top 0.6s;
-  transition: opacity 0.6s;
+  transition: height 0.8s ease;
 }
 
 .navbar {
@@ -14,8 +13,7 @@
   opacity: 1;
   background-color: #F3F3F3;
   z-index: 999;
-  transition: opacity 0.6s;
-  transition: top 0.6s;
+  transition: top 0.8s ease;
 }
 
 .normalizeBtn{

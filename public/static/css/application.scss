@@ -32,8 +32,26 @@ h1 h2 h3 {
   font-family: 'Ubuntu', sans-serif;
 }
 
+.sectionTitle{
+  padding-top: 60px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+  color: #003C89;
+}
+
 .normalizedBackground{
   width: 100%;
+  background-color: $backgroundwhite;
+  margin: 0;
+  padding-bottom: 65px;
+}
+
+.normalizedBackgroundbig{
+  width: 100%;
+  height: 200vh;
   background-color: $backgroundwhite;
   margin: 0;
   padding-bottom: 65px;

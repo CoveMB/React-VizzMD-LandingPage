@@ -6,7 +6,7 @@ const NavBar = () => {
 
   const shouldNavBarShow = () => {
     const currentOffset = window.pageYOffset;
-    const visible = currentOffset > 900;
+    const visible = currentOffset > 1100;
     setifVisible(visible);
   };
 

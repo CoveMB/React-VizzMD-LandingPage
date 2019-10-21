@@ -9,11 +9,11 @@ const CardsContainer = () => {
   const cardTitle = (topic) => {
     switch (topic) {
       case "personalised":
-        return <h1 className="cardTitle">Thérapie Personalisée</h1>;
+        return <h2 className="cardTitle">Thérapie Personalisée</h2>;
       case "engagement":
-        return <h1 className="cardTitle">Engagement Patient</h1>;
+        return <h2 className="cardTitle">Engagement Patient</h2>;
       case "mesure":
-        return <h1 className="cardTitle">"Outcome Mesure"</h1>;
+        return <h2 className="cardTitle">"Outcome Mesure"</h2>;
       default:
         return null;
     }
@@ -45,7 +45,6 @@ const CardsContainer = () => {
 
   return (
     <Fragment>
-      <h1 className="cardsTitle">Les enjeux des soins de santé aujourd'hui</h1>
       <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={selectedCard.isSelected}>
         <div className={getClassSelected()}>
           <SelectedCard

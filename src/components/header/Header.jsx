@@ -5,11 +5,11 @@ import HeaderWave from './HeaderWave';
 const Header = () => {
   return (
     <Fragment>
+      <HeaderWave />
       <HeaderCard />
       <div
         className="header-background"
       />
-      <HeaderWave />
     </Fragment>
 
   );

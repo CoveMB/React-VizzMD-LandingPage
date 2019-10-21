@@ -3,7 +3,6 @@ import React, { Fragment } from 'react';
 const Features = () => {
   return (
     <Fragment>
-      <h2 className="numerisationTitle">Passez du papier au numérique</h2>
       <div className="numerisationImg scrollbarycustom">
         <img src="/static/images/numerisation.png" alt="VizzMD Allow to go from paper to digital" />
       </div>

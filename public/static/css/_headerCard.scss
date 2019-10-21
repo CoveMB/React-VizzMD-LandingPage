@@ -3,7 +3,8 @@
   width: 47vw;
   min-height: 90vh;
   max-height: 100vh;
-  // overflow: scroll;
+  // overflow: auto;
+  overflow-x: hidden;
   margin-left: 2vw;
   margin-top: 8vh;
   background: $backgroundwhite;

@@ -21,3 +21,27 @@ body::-webkit-scrollbar-thumb
 									   color-stop(0.72, $darkblue),
 									   color-stop(0.86, $darkblue));
 }
+
+.scrollbarxcustom::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: $backgroundwhite;
+	border-radius: 8px;
+}
+
+.scrollbarxcustom::-webkit-scrollbar
+{
+	width: 5px;
+	background-color: $backgroundwhite;
+}
+
+.scrollbarxcustom::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-image: -webkit-gradient(linear,
+									   left bottom,
+									   left top,
+									   color-stop(0.44, $lightBlue),
+									   color-stop(0.72, $darkblue),
+									   color-stop(0.86, $darkblue));
+}

@@ -55,7 +55,7 @@
   color: $darkblue;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 800px) {
   .grabEmailPart{
     margin-bottom: 20px;
   }
@@ -72,7 +72,7 @@
     // min-height: 90vh;
     padding-top: 80px;
     width: 100vw;
-    padding-bottom: 300px;
+    padding-bottom: 60px;
     margin: 0 0 0 0;
   }
 }

@@ -35,6 +35,8 @@ const CardsContainer = () => {
 
   const selectCard = (topic) => {
     setSelectedCard({ isSelected: true, selected: topic });
+    document.body.scrollTop = 880;
+    document.documentElement.scrollTop = 880;
   };
 
   const closeSelectedCard = () => {

@@ -10,6 +10,18 @@
   z-index: -1;
 }
 
+.noHeader{
+  position: sticky;
+  top: 0;
+  left: 0;
+  // background-size: cover;
+  background-repeat: no-repeat;
+  height: 98vh;
+  width: 100%;
+  z-index: -1;
+  background-color: $backgroundwhite;
+}
+
 .header-wave {
   position: absolute;
   bottom: 0;

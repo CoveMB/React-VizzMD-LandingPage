@@ -18,7 +18,7 @@ const App = () => {
         <CardsContainer />
       </div>
       <div className="normalizedBackground">
-        <ParalaxTitle title="Passez du papier au numériquet" />
+        <ParalaxTitle title="Passez du papier au numérique" />
         <Features />
       </div>
       <div className="normalizedBackground">

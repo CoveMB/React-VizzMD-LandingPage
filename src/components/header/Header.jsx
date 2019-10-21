@@ -3,7 +3,6 @@ import Plx from 'react-plx';
 import HeaderCard from './HeaderCard';
 import HeaderWave from './HeaderWave';
 
-// An array of parallax effects to be applied - see below for detail
 const parallaxData = [
   {
     start: 300,

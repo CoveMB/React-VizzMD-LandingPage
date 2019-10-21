@@ -1,7 +1,6 @@
 import React from 'react';
 import Plx from 'react-plx';
 
-// An array of parallax effects to be applied - see below for detail
 const parallaxData = [
   {
     start: "self",
@@ -9,7 +8,7 @@ const parallaxData = [
     easing: "easeIn",
     properties: [
       {
-        startValue: 0.5,
+        startValue: 0.6,
         endValue: 1,
         property: 'scale',
       },

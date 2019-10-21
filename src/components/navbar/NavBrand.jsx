@@ -8,7 +8,7 @@ const Brand = () => {
   };
 
   return (
-    <button className="normalizeBtn" onClick={backOnTop}><img className="navBrand" src={logo} alt="VizzMD logo" height="65" width="150" /></button>
+    <button className="normalizeBtn" onClick={backOnTop}><img className="navBrand" src={logo} alt="VizzMD logo" height="35" width="90" /></button>
   );
 };
 

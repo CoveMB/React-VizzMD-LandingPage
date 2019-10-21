@@ -4,7 +4,7 @@ import Plx from 'react-plx';
 const parallaxData = [
   {
     start: "self",
-    duration: 600,
+    duration: 400,
     easing: "easeIn",
     properties: [
       {
@@ -22,7 +22,7 @@ const ParalaxTitle = (props) => {
       className="parallaxTitle"
       parallaxData={parallaxData}
     >
-      <h2 className="sectionTitle">{props.title}</h2>
+      <h2 className="sectionTitle" id={props.idElement}>{props.title}</h2>
     </Plx>
   );
 };

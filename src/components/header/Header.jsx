@@ -6,7 +6,7 @@ import HeaderWave from './HeaderWave';
 const parallaxData = [
   {
     start: 300,
-    duration: 400,
+    duration: 450,
     easing: "linear",
     properties: [
       {

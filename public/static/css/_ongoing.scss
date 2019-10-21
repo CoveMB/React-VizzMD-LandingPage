@@ -1,4 +1,41 @@
 .ongoingIntro{
   width: 70%;
-  margin: 90px auto 60px auto;
+  margin: 60px auto 60px auto;
+}
+
+.ongoingSeparator{
+  width: 10%;
+  border: 1.5px solid $textgrey;
+}
+
+.ongoingRow{
+  width: 70%;
+  margin: 0 15% 0 15%;
+}
+
+.ongoingText{
+  margin: auto 0;
+  width: 60%;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  .ongoingIntro{
+    width: 80%;
+    margin: 60px auto 60px auto;
+  }
+
+  .ongoingText{
+    margin: auto 0;
+    width: 80%;
+    margin: 60px auto 60px auto;
+  }
+
+  .ongoingRow{
+    width: 100%;
+  }
+  .ongoingRow{
+    width: 100%;
+    margin: 0 auto 0 auto;
+  }
 }

@@ -13,13 +13,13 @@ const NavBtn = (props) => {
     const currentPosition = window.scrollY;
 
     if (currentPosition > offsetsObj.ongoing) {
-      setPosition("ongoing");
+      if (position !== "ongoing") { setPosition("ongoing"); }
     } else if (currentPosition > offsetsObj.features && currentPosition < offsetsObj.ongoing) {
-      setPosition("features");
+      if (position !== "features") { setPosition("features"); }
     } else if (currentPosition < offsetsObj.features && currentPosition > offsetsObj.cards) {
-      setPosition("cards");
+      if (position !== "cards") { setPosition("cards"); }
     } else if (currentPosition < offsetsObj.cards) {
-      setPosition("top");
+      if (position !== "top") { setPosition("top"); }
     }
   };
 

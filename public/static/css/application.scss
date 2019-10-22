@@ -14,6 +14,7 @@
 @import 'ongoing';
 @import 'text';
 @import 'footer';
+@import 'navBtn';
 
 body {
   margin:0;
@@ -24,6 +25,10 @@ body {
   font-family: 'Lato', sans-serif;
   overflow-x: hidden;
 }
+
+// html {
+// 	scroll-behavior: smooth;
+// }
 
 .normalizedBackground{
   width: 100%;
@@ -58,4 +63,10 @@ body {
 
 .displayNone{
   display: none;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
 }

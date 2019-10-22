@@ -1,0 +1,30 @@
+.NavBtn{
+  height: 12px;
+  width: 10px;
+  background-color: $darkblue;
+  border-radius: 40px;
+  border: none;
+  z-index: 999;
+}
+
+.NavBtn:hover{
+  transform: scale(1.5);
+}
+
+.NavBtnCards{
+  position: sticky;
+  top: 47vh;
+  left: 97vw;
+}
+
+.NavBtnFeatures{
+  position: sticky;
+  top: 50vh;
+  left: 97vw;
+}
+
+.NavBtnOngoing{
+  position: sticky;
+  top: 53vh;
+  left: 97vw;
+}

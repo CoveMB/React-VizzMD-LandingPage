@@ -1,9 +1,9 @@
 import React from 'react';
-import { Animated } from "react-animated-css";
+import Plx from 'react-plx';
+import { RefContext } from '../context/RefContext';
 import BrandWhite from './BrandWhite';
 import HeaderCardContent from './HeaderCardContent';
 
-import Plx from 'react-plx';
 
 const parallaxData = [
   {

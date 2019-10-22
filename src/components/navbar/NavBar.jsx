@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import NavBrand from './NavBrand';
 
-const NavBar = () => {
+const NavBar = (props) => {
   const [isVisible, setifVisible] = useState(false);
 
   const shouldNavBarShow = () => {
@@ -19,7 +19,7 @@ const NavBar = () => {
 
   return (
     <div className={isVisible ? "navbar" : "navbarHidden"}>
-      {isVisible ? <NavBrand /> : null}
+      {isVisible ? <NavBrand backTop={props.backTop} /> : null}
     </div>
   );
 };

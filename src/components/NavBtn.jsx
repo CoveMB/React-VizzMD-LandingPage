@@ -1,27 +1,48 @@
-import React, { Fragment, useEffect, useContext, useRef } from 'react';
-import { RefContext } from './context/RefContext';
+import React, { Fragment, useEffect, useState, useRef } from 'react';
+
 
 const NavBtn = (props) => {
-  const refContext = useContext(RefContext);
+  const [position, setPosition] = useState("");
 
+  const topNavRef = useRef();
   const cardsNavRef = useRef();
   const featuresRef = useRef();
   const ongoingref = useRef();
 
-  const checkPosition = (event) => {
-    console.log(window.scrollY);
+  const checkPosition = (offsetsObj) => {
+    const currentPosition = window.scrollY;
+
+    if (currentPosition > offsetsObj.ongoing) {
+      setPosition("ongoing");
+    } else if (currentPosition > offsetsObj.features && currentPosition < offsetsObj.ongoing) {
+      setPosition("features");
+    } else if (currentPosition < offsetsObj.features && currentPosition > offsetsObj.cards) {
+      setPosition("cards");
+    } else if (currentPosition < offsetsObj.cards) {
+      setPosition("top");
+    }
   };
 
   useEffect(() => {
-    const offsets = props.getOffsets();
-    window.addEventListener('scroll', checkPosition);
+    const offsetsObj = props.getOffsets();
+    window.addEventListener('scroll', (event) => {
+      checkPosition(offsetsObj);
+    });
   }, []);
+
+  const getNavBtnClasses = (navBtn) => {
+    if (navBtn === position) {
+      return `NavBtn activateBtn NavBtn${navBtn}`;
+    }
+    return `NavBtn NavBtn${navBtn}`;
+  };
 
   return (
     <Fragment>
-      <button className="NavBtn NavBtnCards" ref={cardsNavRef} onClick={() => refContext.scrollTo("cards")} />
-      <button className="NavBtn NavBtnFeatures" ref={featuresRef} onClick={() => refContext.scrollTo("features")} />
-      <button className="NavBtn NavBtnOngoing" ref={ongoingref} onClick={() => refContext.scrollTo("ongoing")} />
+      <button className={getNavBtnClasses("top")} ref={topNavRef} onClick={() => props.scrollTo("top")} />
+      <button className={getNavBtnClasses("cards")} ref={cardsNavRef} onClick={() => props.scrollTo("cards")} />
+      <button className={getNavBtnClasses("features")} ref={featuresRef} onClick={() => props.scrollTo("features")} />
+      <button className={getNavBtnClasses("ongoing")} ref={ongoingref} onClick={() => props.scrollTo("ongoing")} />
     </Fragment>
   );
 };

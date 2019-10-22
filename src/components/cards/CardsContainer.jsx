@@ -1,11 +1,9 @@
-import React, { Fragment, useState, useContext } from 'react';
+import React, { Fragment, useState } from 'react';
 import { Animated } from "react-animated-css";
 import SelectedCard from './SelectedCard';
-import { RefContext } from '../context/RefContext';
 import Card from './Card';
 
-const CardsContainer = () => {
-  const refContext = useContext(RefContext);
+const CardsContainer = (props) => {
   const [selectedCard, setSelectedCard] = useState({ isSelected: false, selected: false });
 
   const cardTitle = (topic) => {
@@ -37,7 +35,7 @@ const CardsContainer = () => {
 
   const selectCard = (topic) => {
     setSelectedCard({ isSelected: true, selected: topic });
-    refContext.scrollTo("cards");
+    props.scrollTo("cards");
   };
 
   const closeSelectedCard = () => {

@@ -1,6 +1,4 @@
-import React, { Fragment, useEffect, useContext, useRef } from 'react';
-
-import { RefContext } from './context/RefContext';
+import React, { Fragment, useRef } from 'react';
 
 import OpacityParallax from './hoc/OpacityParallax';
 
@@ -14,41 +12,49 @@ import ParalaxTitle from './ParalaxTitle';
 import Footer from './footer/Footer';
 
 const App = () => {
-  const refContext = useContext(RefContext);
-
-  const topRef = useRef();
   const cardsRef = useRef();
   const featuresRef = useRef();
   const ongoingRef = useRef();
 
-  useEffect(() => {
-    refContext.grabRef("top", topRef);
-    refContext.grabRef("cards", cardsRef);
-    refContext.grabRef("features", featuresRef);
-    refContext.grabRef("ongoing", ongoingRef);
-  }, []);
+  const scrollTo = (element) => {
+    switch (element) {
+      case "top":
+        window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
+        break;
+      case "cards":
+        window.scrollTo({ left: 0, top: cardsRef.current.offsetTop - 30, behavior: 'smooth' });
+        break;
+      case "features":
+        window.scrollTo({ left: 0, top: featuresRef.current.offsetTop - 30, behavior: 'smooth' });
+        break;
+      case "ongoing":
+        window.scrollTo({ left: 0, top: ongoingRef.current.offsetTop - 30, behavior: 'smooth' });
+        break;
+      default:
+        break;
+    }
+  };
 
   const getOffsets = () => {
-    const offsets =
-    {
-      top: topRef.current.offsetTop,
-      cards: cardsRef.current.offsetTop,
-      features: featuresRef.current.offsetTop,
-      ongoing: ongoingRef.current.offsetTop
-    };
-    return offsets;
+    return (
+      {
+        top: 0,
+        cards: cardsRef.current.offsetTop - 400,
+        features: featuresRef.current.offsetTop - 400,
+        ongoing: ongoingRef.current.offsetTop - 400
+      });
   };
 
   return (
     <Fragment>
-      <div ref={topRef} />
-      <NavBtn getOffsets={getOffsets} />
-      <NavBar />
+      <div />
+      <NavBtn getOffsets={getOffsets} scrollTo={scrollTo} />
+      <NavBar scrollTo={scrollTo} />
       <Header />
       <OpacityParallax nextId="#features">
         <div className="normalizedBackground" id="cardsDiv" ref={cardsRef}>
           <ParalaxTitle title="Les enjeux des soins de santé aujourd'hui" />
-          <CardsContainer />
+          <CardsContainer scrollTo={scrollTo} />
         </div>
       </OpacityParallax>
       <OpacityParallax nextId="#ongoing">

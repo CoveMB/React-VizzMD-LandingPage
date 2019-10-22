@@ -19,7 +19,7 @@ const NavBar = (props) => {
 
   return (
     <div className={isVisible ? "navbar" : "navbarHidden"}>
-      {isVisible ? <NavBrand backTop={props.backTop} /> : null}
+      {isVisible ? <NavBrand scrollTo={props.scrollTo} /> : null}
     </div>
   );
 };

@@ -1,6 +1,5 @@
 import React from 'react';
 import Plx from 'react-plx';
-import { RefContext } from '../context/RefContext';
 import BrandWhite from './BrandWhite';
 import HeaderCardContent from './HeaderCardContent';
 

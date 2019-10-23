@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-const Features = () => {
+const features = () => {
   return (
     <Fragment>
       <div className="numerisationImg scrollbarycustom">
@@ -10,4 +10,4 @@ const Features = () => {
     </Fragment>
   );
 };
-export default Features;
+export default features;

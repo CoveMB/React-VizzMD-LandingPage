@@ -3,7 +3,7 @@ import { Animated } from "react-animated-css";
 import SelectedCard from './SelectedCard';
 import Card from './Card';
 
-const CardsContainer = (props) => {
+const cardsContainer = (props) => {
   const [selectedCard, setSelectedCard] = useState({ isSelected: false, selected: false });
 
   const cardTitle = (topic) => {
@@ -64,4 +64,4 @@ const CardsContainer = (props) => {
   );
 };
 
-export default CardsContainer;
+export default cardsContainer;

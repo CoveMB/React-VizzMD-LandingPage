@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Card = (props) => {
+const card = (props) => {
   const handleClick = () => {
     props.selectCard(props.topic);
   };
@@ -21,4 +21,4 @@ const Card = (props) => {
   );
 };
 
-export default Card;
+export default card;

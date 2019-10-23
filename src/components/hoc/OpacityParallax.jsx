@@ -1,7 +1,7 @@
 import React from 'react';
 import Plx from 'react-plx';
 
-const OpacityParallax = (props) => {
+const opacityParallax = (props) => {
   const parallaxData = [
     {
       start: props.nextId,
@@ -27,4 +27,4 @@ const OpacityParallax = (props) => {
   );
 };
 
-export default OpacityParallax;
+export default opacityParallax;

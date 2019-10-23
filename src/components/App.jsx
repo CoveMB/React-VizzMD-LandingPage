@@ -11,7 +11,7 @@ import Ongoing from './ongoing/Ongoing';
 import ParalaxTitle from './ParalaxTitle';
 import Footer from './footer/Footer';
 
-const App = () => {
+const app = () => {
   const cardsRef = useRef();
   const featuresRef = useRef();
   const ongoingRef = useRef();
@@ -72,4 +72,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default app;

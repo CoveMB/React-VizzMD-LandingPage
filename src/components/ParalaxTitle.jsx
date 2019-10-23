@@ -16,7 +16,7 @@ const parallaxData = [
   },
 ];
 
-const ParalaxTitle = (props) => {
+const paralaxTitle = (props) => {
   return (
     <Plx
       className="parallaxTitle"
@@ -27,4 +27,4 @@ const ParalaxTitle = (props) => {
   );
 };
 
-export default ParalaxTitle;
+export default paralaxTitle;

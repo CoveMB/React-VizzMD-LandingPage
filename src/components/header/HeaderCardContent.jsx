@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import HeaderForm from './HeaderForm';
 
-const HeaderCardContent = () => {
+const headerCardContent = () => {
   return (
     <Fragment>
       <h1 className="headerCardTitle">Mesurez l’efficacité de vos traitements afin de les rendre plus efficients.</h1>
@@ -12,7 +12,7 @@ const HeaderCardContent = () => {
         <p><img style={{ marginLeft: "15px" }} className="svgDone" src="/static/images/donesvg.svg" alt="svg done" /><strong className="darkblueTitle">Numériques</strong> (standardisée et rapide d’accès)</p>
         <p><img style={{ marginLeft: "15px" }} className="svgDone" src="/static/images/donesvg.svg" alt="svg done" /><strong className="darkblueTitle">Visuelles</strong> (faciles à interpréter et comparer)</p>
         <p><img style={{ marginLeft: "15px" }} className="svgDone" src="/static/images/donesvg.svg" alt="svg done" /><strong className="darkblueTitle">Accessibles</strong> (partagées entre thérapeutes)</p>
-        <p><img style={{ marginLeft: "15px" }} className="svgDone" src="/static/images/donesvg.svg" alt="svg done" /><strong className="darkblueTitle">Engageante</strong> (le patient de suivre sa progression)</p>
+        <p><img style={{ marginLeft: "15px" }} className="svgDone" src="/static/images/donesvg.svg" alt="svg done" /><strong className="darkblueTitle">Evolutive</strong> (Algorithme AI et Deep Learning))</p>
         <div className="grabEmailPart">
           <HeaderForm />
         </div>
@@ -21,4 +21,4 @@ const HeaderCardContent = () => {
   );
 };
 
-export default HeaderCardContent;
+export default headerCardContent;

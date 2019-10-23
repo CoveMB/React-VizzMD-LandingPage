@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-const SelectedCardText = (props) => {
+const selectedCardText = (props) => {
   const cardText = () => {
     switch (props.topic) {
       case "personalised":
@@ -29,4 +29,4 @@ const SelectedCardText = (props) => {
   );
 };
 
-export default SelectedCardText;
+export default selectedCardText;

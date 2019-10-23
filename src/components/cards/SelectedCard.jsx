@@ -1,7 +1,7 @@
 import React from 'react';
 import SelectedCardText from './SelectedCardText';
 
-const SelectedCard = (props) => {
+const selectedCard = (props) => {
   const handleClick = () => {
     props.closeSelectedCard();
   };
@@ -28,4 +28,4 @@ const SelectedCard = (props) => {
   );
 };
 
-export default SelectedCard;
+export default selectedCard;

@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-const Mvp = () => {
+const mvp = () => {
   return (
     <Fragment>
       <hr className="ongoingSeparator" />
@@ -12,4 +12,4 @@ const Mvp = () => {
     </Fragment>
   );
 };
-export default Mvp;
+export default mvp;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import NavBrand from './NavBrand';
 
-const NavBar = (props) => {
+const navBar = (props) => {
   const [isVisible, setifVisible] = useState(false);
 
   const shouldNavBarShow = () => {
@@ -24,4 +24,4 @@ const NavBar = (props) => {
   );
 };
 
-export default NavBar;
+export default navBar;

@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import Spinner from '../Spinner';
 
-const HeaderForm = () => {
+const headerForm = () => {
   const [email, setEmail] = useState("");
   const [sending, setSending] = useState(false);
   const [succes, setsucces] = useState(false);
@@ -59,4 +59,4 @@ const HeaderForm = () => {
   );
 };
 
-export default HeaderForm;
+export default headerForm;

@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect } from 'react';
 import TagManager from 'react-gtm-module';
 
-const GtmScript = (props) => {
+const gtmScript = (props) => {
   useEffect(() => {
     if (window.location.href.match(/vizzmd.com/)) {
       const tagManagerArgs = {
@@ -19,4 +19,4 @@ const GtmScript = (props) => {
   );
 };
 
-export default GtmScript;
+export default gtmScript;

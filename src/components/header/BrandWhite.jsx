@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../../../public/static/images/logo_white.png';
 
-const BrandWhite = () => {
+const brandWhite = () => {
   return (
     <div className="brand">
       <img className="brandHeaderCard" src={logo} alt="VizzMD logo" />
@@ -9,4 +9,4 @@ const BrandWhite = () => {
   );
 };
 
-export default BrandWhite;
+export default brandWhite;

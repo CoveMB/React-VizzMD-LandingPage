@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState, useRef } from 'react';
 
 
-const NavBtn = (props) => {
+const navBtn = (props) => {
   const [position, setPosition] = useState("");
 
   const topNavRef = useRef();
@@ -47,4 +47,4 @@ const NavBtn = (props) => {
   );
 };
 
-export default NavBtn;
+export default navBtn;

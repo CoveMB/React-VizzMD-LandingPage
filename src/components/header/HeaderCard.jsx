@@ -19,7 +19,7 @@ const parallaxData = [
   },
 ];
 
-const HeaderCard = () => {
+const headerCard = () => {
   return (
     <Plx
       className="parallaxTitle"
@@ -37,4 +37,4 @@ const HeaderCard = () => {
   );
 };
 
-export default HeaderCard;
+export default headerCard;

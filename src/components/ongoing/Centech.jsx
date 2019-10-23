@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-const Centech = () => {
+const centech = () => {
   return (
     <Fragment>
       <hr className="ongoingSeparator" />
@@ -12,4 +12,4 @@ const Centech = () => {
     </Fragment>
   );
 };
-export default Centech;
+export default centech;

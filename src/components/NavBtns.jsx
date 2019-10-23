@@ -1,20 +1,25 @@
 import React, { Fragment, useEffect, useState } from 'react';
+import { useStore } from '../store/useStore';
 
 
 const navBtns = (props) => {
+  const [state] = useStore();
   const [position, setPosition] = useState("");
-  const { offsets, scrollTo } = props;
+  const { scrollTo } = props;
 
   const checkPosition = () => {
     const currentPosition = window.scrollY;
 
-    if (currentPosition > offsets.ongoing) {
+    if (currentPosition > state.refsOffsets.ongoing - 400) {
       if (position !== "ongoing") { setPosition("ongoing"); }
-    } else if (currentPosition > offsets.features && currentPosition < offsets.ongoing) {
+    } else if (currentPosition > state.refsOffsets.features - 400
+      && currentPosition < state.refsOffsets.ongoing - 400
+    ) {
       if (position !== "features") { setPosition("features"); }
-    } else if (currentPosition < offsets.features && currentPosition > offsets.cards) {
+    } else if (currentPosition < state.refsOffsets.features - 400
+      && currentPosition > state.refsOffsets.cards - 400) {
       if (position !== "cards") { setPosition("cards"); }
-    } else if (currentPosition < offsets.cards) {
+    } else if (currentPosition < state.refsOffsets.cards - 400) {
       if (position !== "top") { setPosition("top"); }
     }
   };
@@ -24,7 +29,7 @@ const navBtns = (props) => {
     return () => {
       window.removeEventListener('scroll', checkPosition);
     };
-  }, [offsets]);
+  }, [state, position]);
 
   const getNavBtnClasses = (navBtn) => {
     if (navBtn === position) {

@@ -1,4 +1,5 @@
-import React, { Fragment, useRef, useEffect, useState, useLayoutEffect } from 'react';
+import React, { Fragment, useRef, useEffect } from 'react';
+import { useStore } from '../store/useStore';
 
 import OpacityParallax from './hoc/OpacityParallax';
 
@@ -12,7 +13,7 @@ import ParalaxTitle from './ParalaxTitle';
 import Footer from './footer/Footer';
 
 const app = () => {
-  const [offsets, setOffsets] = useState({});
+  const [state, dispatch] = useStore(false);
 
   const cardsRef = useRef();
   const featuresRef = useRef();
@@ -24,13 +25,13 @@ const app = () => {
         window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
         break;
       case "cards":
-        window.scrollTo({ left: 0, top: cardsRef.current.offsetTop - 30, behavior: 'smooth' });
+        window.scrollTo({ left: 0, top: state.refsOffsets.cards - 30, behavior: 'smooth' });
         break;
       case "features":
-        window.scrollTo({ left: 0, top: featuresRef.current.offsetTop - 30, behavior: 'smooth' });
+        window.scrollTo({ left: 0, top: state.refsOffsets.features - 30, behavior: 'smooth' });
         break;
       case "ongoing":
-        window.scrollTo({ left: 0, top: ongoingRef.current.offsetTop - 30, behavior: 'smooth' });
+        window.scrollTo({ left: 0, top: state.refsOffsets.ongoing - 30, behavior: 'smooth' });
         break;
       default:
         break;
@@ -39,16 +40,16 @@ const app = () => {
 
   const adjustOffsets = () => {
     const offsetsToSet =
-      {
-        top: 0,
-        cards: cardsRef.current.offsetTop - 400,
-        features: featuresRef.current.offsetTop - 400,
-        ongoing: ongoingRef.current.offsetTop - 400
-      };
-    setOffsets({ ...offsetsToSet });
+    {
+      top: 0,
+      cards: cardsRef.current.offsetTop,
+      features: featuresRef.current.offsetTop,
+      ongoing: ongoingRef.current.offsetTop
+    };
+    dispatch("SET_REFS", offsetsToSet);
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const updateSize = () => {
       adjustOffsets();
     };
@@ -59,8 +60,7 @@ const app = () => {
 
   return (
     <Fragment>
-      <div />
-      <NavBtns scrollTo={scrollTo} offsets={offsets} />
+      <NavBtns scrollTo={scrollTo} />
       <NavBar scrollTo={scrollTo} />
       <Header />
       <OpacityParallax nextId="#features">

@@ -1,8 +1,8 @@
-import React, { Fragment, useRef } from 'react';
+import React, { Fragment, useRef, useEffect, useState, useLayoutEffect } from 'react';
 
 import OpacityParallax from './hoc/OpacityParallax';
 
-import NavBtn from './NavBtn';
+import NavBtns from './NavBtns';
 import NavBar from './navbar/NavBar';
 import Header from './header/Header';
 import Features from './features/Features';
@@ -12,6 +12,8 @@ import ParalaxTitle from './ParalaxTitle';
 import Footer from './footer/Footer';
 
 const app = () => {
+  const [offsets, setOffsets] = useState({});
+
   const cardsRef = useRef();
   const featuresRef = useRef();
   const ongoingRef = useRef();
@@ -35,20 +37,30 @@ const app = () => {
     }
   };
 
-  const getOffsets = () => {
-    return (
+  const adjustOffsets = () => {
+    const offsetsToSet =
       {
         top: 0,
         cards: cardsRef.current.offsetTop - 400,
         features: featuresRef.current.offsetTop - 400,
         ongoing: ongoingRef.current.offsetTop - 400
-      });
+      };
+    setOffsets({ ...offsetsToSet });
   };
+
+  useLayoutEffect(() => {
+    const updateSize = () => {
+      adjustOffsets();
+    };
+    window.addEventListener('resize', updateSize);
+    updateSize();
+    return () => window.removeEventListener('resize', updateSize);
+  }, []);
 
   return (
     <Fragment>
       <div />
-      <NavBtn getOffsets={getOffsets} scrollTo={scrollTo} />
+      <NavBtns scrollTo={scrollTo} offsets={offsets} />
       <NavBar scrollTo={scrollTo} />
       <Header />
       <OpacityParallax nextId="#features">

@@ -6,10 +6,6 @@ const headerForm = () => {
   const [sending, setSending] = useState(false);
   const [succes, setsucces] = useState(false);
 
-  const handleChange = (event) => {
-    setEmail(event.target.value);
-  };
-
   const handleSubmit = (event) => {
     event.preventDefault();
     setSending(true);
@@ -43,7 +39,7 @@ const headerForm = () => {
             id="emailInput"
             value={email}
             placeholder="Laissez nous votre email"
-            onChange={handleChange}
+            onChange={(e) => { setEmail(e.target.value); }}
           />
         </div>
         <button type="submit" className="btn btnVizz">Soumettre</button>

@@ -11,12 +11,12 @@ const card = (props) => {
     >
       <img className="svgCard" src={`/static/images/svg${props.topic}.svg`} alt={`svg ${props.topic}`} />
       {props.cardTitle(props.topic)}
-      <buttom
+      <button
         onClick={handleClick}
         className="normalizeBtn"
       >
         <img className="svgDots" src="/static/images/svgDots.svg" alt="svg dots" />
-      </buttom>
+      </button>
     </div>
   );
 };

@@ -41,7 +41,6 @@
     "next-images": "^1.2.0",
     "next-redux-wrapper": "^4.0.1",
     "react": "16.8",
-    "react-animated-css": "^1.2.1",
     "react-dom": "16.8",
     "react-ga": "^2.6.0",
     "react-gtm-module": "^2.0.8",

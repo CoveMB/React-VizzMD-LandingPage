@@ -1,15 +1,16 @@
-.card{
-  width: 300px;
-  height: 360px;
-  margin-bottom: 30px;
-  background: $cardwhite;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
+.topic{
+  width: 33%;
+  padding: 0 5% 0 5%;
+  border-right: 1px solid $darkblue;
+}
+
+.topicNoBorder{
+  border: none;
 }
 
 .svgCard{
-  width: 40%;
-  margin: 40px 30% 40px 30%;
+  width: 30%;
+  margin: 30px 35% 30px 35%;
 }
 
 .svgDots{
@@ -23,71 +24,43 @@
 }
 
 .cardBox{
-  margin: 100px 10% 50px 10%;
+  margin: 50px 10% 50px 10%;
 }
-
-.closeCardBtn{
-  position:absolute;
-  right: 15%;
-  margin: 10px 0 0 0;
-}
-
-.svgClose{
-  width: 40px;
-}
-
-.svgSelectedCard{
-  width: 30%;
-  margin: 65px 35% 40px 35%;
-}
-
-.selectedCard{
-  width: 90%;
-  min-height: 350px;
-  background: $cardwhite;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
-}
-
-.selectedCardTitle{
-  width: 30%;
-  padding: 0 10px 0 10px;
-  font-size: 1em;
-}
-
-.selectedCardText{
-  margin: 5%;
-  width: 90%;
-}
-
 
 @media only screen and (max-width: 1024px) {
-  .svgSelectedCard{
+
+  .cardMobileTitleLayout{
     width: 30%;
-    margin: 20px 35% 20px 35%;
+    padding: 20px 10px 20px 10px;
   }
 
-  .selectedCardText {
-    width: 80%;
-    margin: 20px 10% 20px 10%;
+  .cardMobileTextLayout{
+    width: 70%;
+    padding: 20px 10px 20px 10px;
   }
 
-  .cardBox{
-    margin: 80px 10% 0 10%;
+  .mobilepaddingNone{
+    padding-bottom: 0;
+    margin-bottom: 0 !important;
   }
 
-  .card{
-    width: 150px;
-    height: 221px;
-    margin-bottom: 30px;
-    background: $cardwhite;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 8px;
+  .topic{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-right: none;
+    margin: 0 0 40px 0;
+  }
+
+  .flexColumnMobile{
+    flex-direction: column;
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
 
   .svgCard{
-    width: 40%;
-    margin: 30px 30% 30px 30%;
+    width: 30%;
+    margin: 0 35% 20px 35%;
   }
 
   .svgDots{
@@ -95,9 +68,29 @@
     width: 20%;
     margin: 25px auto 25px auto;
   }
+}
 
-  .svgSelectedCard{
+@media only screen and (max-width: 1024px) {
+  .topic{
+    display: block;
+    align-items: center;
+    width: 100%;
+    border-right: none;
+    // margin: 0 10% 40px 10%;
+  }
+
+  .cardMobileTitleLayout{
+    width: 100%;
+    padding: 20px 10px 20px 10px;
+  }
+
+  .cardMobileTextLayout{
+    width: 100%;
+    padding: 20px 10px 20px 10px;
+  }
+
+  .svgCard{
     width: 20%;
-    margin: 65px 40% 40px 40%;
+    margin: 0 40% 20px 40%;
   }
 }

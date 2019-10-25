@@ -1,38 +1,46 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import { useStore } from '../store/useStore';
 
 
 const navBtns = (props) => {
-  const [state] = useStore();
-  const [position, setPosition] = useState("");
+  const [state, dispatch] = useStore();
   const { scrollTo } = props;
 
-  const checkPosition = () => {
-    const currentPosition = window.scrollY;
-
-    if (currentPosition > state.refsOffsets.ongoing - 400) {
-      if (position !== "ongoing") { setPosition("ongoing"); }
-    } else if (currentPosition > state.refsOffsets.features - 400
-      && currentPosition < state.refsOffsets.ongoing - 400
-    ) {
-      if (position !== "features") { setPosition("features"); }
-    } else if (currentPosition < state.refsOffsets.features - 400
-      && currentPosition > state.refsOffsets.cards - 400) {
-      if (position !== "cards") { setPosition("cards"); }
-    } else if (currentPosition < state.refsOffsets.cards - 400) {
-      if (position !== "top") { setPosition("top"); }
-    }
-  };
-
   useEffect(() => {
-    window.addEventListener('scroll', checkPosition);
-    return () => {
-      window.removeEventListener('scroll', checkPosition);
+    const updatePosition = () => {
+      const currentPosition = window.scrollY;
+
+      if (state.refsOffsets) {
+        if (currentPosition > state.refsOffsets.ongoing - 400) {
+          if (state.position !== "ongoing") {
+            dispatch("SET_POSITION", "ongoing");
+          }
+        } else if (currentPosition > state.refsOffsets.features - 400
+          && currentPosition < state.refsOffsets.ongoing - 400) {
+          if (state.position !== "features") {
+            dispatch("SET_POSITION", "features");
+          }
+        } else if (currentPosition < state.refsOffsets.features - 400
+          && currentPosition > state.refsOffsets.cards - 400) {
+          if (state.position !== "cards") {
+            dispatch("SET_POSITION", "cards");
+          }
+        } else if (currentPosition < state.refsOffsets.cards - 400) {
+          if (state.position !== "top") {
+            dispatch("SET_POSITION", "top");
+          }
+        }
+      }
     };
-  }, [state, position]);
+
+    window.addEventListener('scroll', updatePosition);
+    return () => {
+      window.removeEventListener('scroll', updatePosition);
+    };
+  });
 
   const getNavBtnClasses = (navBtn) => {
-    if (navBtn === position) {
+    if (navBtn === state.position) {
       return `NavBtn activateBtn NavBtn${navBtn}`;
     }
     return `NavBtn NavBtn${navBtn}`;

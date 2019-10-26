@@ -1,26 +1,13 @@
 import React from 'react';
 import Plx from 'react-plx';
 
-const opacityParallax = (props) => {
-  const parallaxData = [
-    {
-      start: props.nextId,
-      duration: 500,
-      easing: "linear",
-      properties: [
-        {
-          startValue: 1,
-          endValue: 0,
-          property: 'opacity',
-        },
-      ],
-    },
-  ];
+import { parallaxDataOpacity } from '../../parallaxEffects/parallaxEffects';
 
+const opacityParallax = (props) => {
   return (
     <Plx
       className={props.classNameElement}
-      parallaxData={parallaxData}
+      parallaxData={parallaxDataOpacity(props.nextId)}
     >
       {props.children}
     </Plx>

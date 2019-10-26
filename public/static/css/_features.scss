@@ -2,12 +2,12 @@
   width: 80%;
   margin: 90px auto;
   text-align: center;
-  overflow-x: auto;
 }
 
 .numerisationText{
   width: 60%;
-  margin: 0 auto;
+  height: 100px;
+  margin: -560px auto 0 auto;
   text-align: center;
 }
 
@@ -21,8 +21,60 @@
   color: #003C89;
 }
 
-@media only screen and (max-width: 1024px) {
-  .numerisationImg{
-    margin: 40px auto;
+.paperImg{
+  position:relative;
+}
+
+.asiaImg{
+  width: 80%;
+}
+
+
+.mockupPlx{
+  position:relative;
+  top:-550px;
+}
+
+@media only screen and (max-width: 960px) {
+  .mockupPlx {
+    top:-450px;
+  }
+
+  .numerisationText{
+    margin: -500px auto 50px auto;
+  }
+
+}
+
+@media only screen and (max-width: 645px) {
+  .mockupPlx {
+    top: -320px;
+  }
+
+  .numerisationText{
+    margin: -340px auto 80px auto;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .paperImg{
+    position:relative;
+    top: -80px;
+  }
+
+  .asiaImg{
+    width: 90%;
+  }
+
+  .mockupImg{
+    width: 80%;
+  }
+
+  .mockupPlx {
+    top: -320px;
+  }
+
+  .numerisationText{
+    margin: -360px auto 160px auto;
   }
 }

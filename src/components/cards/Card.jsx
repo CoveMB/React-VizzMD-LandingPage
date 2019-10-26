@@ -1,52 +1,9 @@
 import React from 'react';
 import Plx from 'react-plx';
 
+import { parallaxDataPT, parallaxDataPE, parallaxDataOM } from '../../parallaxEffects/parallaxEffects';
+
 const card = (props) => {
-  const parallaxDataPT = [
-    {
-      start: "self",
-      duration: 300,
-      easing: "linear",
-      properties: [
-        {
-          startValue: 280,
-          endValue: 0,
-          property: 'translateY',
-        },
-      ],
-    },
-  ];
-
-  const parallaxDataPE = [
-    {
-      start: "self",
-      duration: 500,
-      easing: "linear",
-      properties: [
-        {
-          startValue: 280,
-          endValue: 0,
-          property: 'translateY',
-        },
-      ],
-    },
-  ];
-
-  const parallaxDataOM = [
-    {
-      start: "self",
-      duration: 700,
-      easing: "linear",
-      properties: [
-        {
-          startValue: 280,
-          endValue: 0,
-          property: 'translateY',
-        },
-      ],
-    },
-  ];
-
   const getParallaxData = (topic) => {
     switch (topic) {
       case "personalised":

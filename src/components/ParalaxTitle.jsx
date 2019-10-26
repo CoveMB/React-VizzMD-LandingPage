@@ -1,26 +1,13 @@
 import React from 'react';
 import Plx from 'react-plx';
 
-const parallaxData = [
-  {
-    start: "self",
-    duration: 400,
-    easing: "easeIn",
-    properties: [
-      {
-        startValue: 0.4,
-        endValue: 0.8,
-        property: 'scale',
-      },
-    ],
-  },
-];
+import { parallaxDataTitle } from '../parallaxEffects/parallaxEffects';
 
 const paralaxTitle = (props) => {
   return (
     <Plx
       className="parallaxTitle"
-      parallaxData={parallaxData}
+      parallaxData={parallaxDataTitle}
     >
       <h2 className="sectionTitle" id={props.idElement}>{props.title}</h2>
     </Plx>

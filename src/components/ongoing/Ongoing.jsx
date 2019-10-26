@@ -1,38 +1,10 @@
 import React, { Fragment } from 'react';
 import Plx from 'react-plx';
 
+import { parallaxDataCentech, parallaxDataMvp } from '../../parallaxEffects/parallaxEffects';
+
 import Centech from './Centech';
 import Mvp from './Mvp';
-
-const parallaxDataCentech = [
-  {
-    start: "self",
-    duration: 550,
-    easing: "linear",
-    properties: [
-      {
-        startValue: -1400,
-        endValue: 0,
-        property: 'translateX',
-      },
-    ],
-  },
-];
-
-const parallaxDataMvp = [
-  {
-    start: "self",
-    duration: 250,
-    easing: "linear",
-    properties: [
-      {
-        startValue: 1400,
-        endValue: 0,
-        property: 'translateX',
-      },
-    ],
-  },
-];
 
 const ongoing = (props) => {
   return (

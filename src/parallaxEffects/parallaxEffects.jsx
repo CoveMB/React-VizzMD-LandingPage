@@ -116,7 +116,7 @@ export const parallaxDataPaper = [
         property: 'opacity',
       },
       {
-        startValue: 1.3,
+        startValue: 1.1,
         endValue: 0,
         property: 'scale',
       },

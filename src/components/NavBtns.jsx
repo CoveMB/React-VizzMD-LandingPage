@@ -48,10 +48,10 @@ const navBtns = (props) => {
 
   return (
     <Fragment>
-      <button className={getNavBtnClasses("top")} onClick={() => scrollTo("top")} />
-      <button className={getNavBtnClasses("cards")} onClick={() => scrollTo("cards")} />
-      <button className={getNavBtnClasses("features")} onClick={() => scrollTo("features")} />
-      <button className={getNavBtnClasses("ongoing")} onClick={() => scrollTo("ongoing")} />
+      <button className={getNavBtnClasses("top")} onClick={() => dispatch("GO_TO_REF", "top")} />
+      <button className={getNavBtnClasses("cards")} onClick={() => dispatch("GO_TO_REF", "cards")} />
+      <button className={getNavBtnClasses("features")} onClick={() => dispatch("GO_TO_REF", "features")} />
+      <button className={getNavBtnClasses("ongoing")} onClick={() => dispatch("GO_TO_REF", "ongoing")} />
     </Fragment>
   );
 };

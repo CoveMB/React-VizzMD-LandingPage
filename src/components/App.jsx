@@ -13,30 +13,11 @@ import ParalaxTitle from './ParalaxTitle';
 import Footer from './footer/Footer';
 
 const app = () => {
-  const [state, dispatch] = useStore(false);
+  const dispatch = useStore(false)[1];
 
   const cardsRef = useRef();
   const featuresRef = useRef();
   const ongoingRef = useRef();
-
-  const scrollTo = (element) => {
-    switch (element) {
-      case "top":
-        window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
-        break;
-      case "cards":
-        window.scrollTo({ left: 0, top: state.refsOffsets.cards - 30, behavior: 'smooth' });
-        break;
-      case "features":
-        window.scrollTo({ left: 0, top: state.refsOffsets.features - 30, behavior: 'smooth' });
-        break;
-      case "ongoing":
-        window.scrollTo({ left: 0, top: state.refsOffsets.ongoing - 30, behavior: 'smooth' });
-        break;
-      default:
-        break;
-    }
-  };
 
   const adjustOffsets = () => {
     const offsetsToSet =
@@ -62,13 +43,13 @@ const app = () => {
 
   return (
     <Fragment>
-      <NavBtns scrollTo={scrollTo} />
-      <NavBar scrollTo={scrollTo} />
+      <NavBtns />
+      <NavBar />
       <Header />
       <OpacityParallax nextId="#features">
         <div className="normalizedBackground" id="cardsDiv" ref={cardsRef}>
           <ParalaxTitle title="Les enjeux des soins de santé aujourd'hui" />
-          <CardsContainer scrollTo={scrollTo} />
+          <CardsContainer />
         </div>
       </OpacityParallax>
       <OpacityParallax nextId="#ongoing">

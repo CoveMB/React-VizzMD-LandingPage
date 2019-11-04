@@ -4,7 +4,7 @@ import HeaderForm from './HeaderForm';
 const headerCardContent = () => {
   return (
     <Fragment>
-      <h1 className="headerCardTitle">Mesurez l’efficacité de vos traitements afin de les rendre plus efficients.</h1>
+      <h1 className="headerCardTitle">Visualisez l’efficacité de vos traitements afin de les rendre plus efficients.</h1>
       <div className="headerCardText">
         <h2 style={{ marginBottom: "20px" }}>
           Avec VizzMD, les données de santé sont:

@@ -49,7 +49,7 @@ const headerForm = () => {
 
   return (
     <Fragment>
-      <h2 style={{ marginBottom: "10px" }}>Participez au dévellopement de VizzMD</h2>
+      <h2 style={{ marginBottom: "10px" }}>Participez au développement de VizzMD</h2>
       {emailBodyContent()}
     </Fragment>
   );

@@ -33,7 +33,7 @@ const card = (props) => {
       case "mesure":
         return (
           <p className="cardText">
-            Une meilleure mesure des résultats des traitements administré permet de prendre des décisions plus éclairées sur les soins à attribuer aux patients. Ainsi que <strong className="blueTitle">détablire un lien de confiance entre traitment et cout.</strong>
+            Une meilleure mesure des résultats des traitements administrés permet de prendre des décisions plus éclairées sur les soins à attribuer aux patients. Ainsi que <strong className="blueTitle">d'établir un lien de confiance entre traitment et coût.</strong>
           </p>
         );
       default:
